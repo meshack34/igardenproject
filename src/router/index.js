@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+import department from "../components/department.vue";
+import employee from "../components/employee.vue";
 Vue.use(VueRouter)
 
 const routes = [
@@ -9,6 +10,16 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    name: "employee",
+    component: employee,
+    path: "/s",
+  },
+  {
+    name: "department",
+    component: department,
+    path: "/department",
   },
   {
     path: '/about',
@@ -27,3 +38,4 @@ const router = new VueRouter({
 })
 
 export default router
+
