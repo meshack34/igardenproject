@@ -1,149 +1,88 @@
-
-
 <template>
-  <header>
-     
-       <div class="logo">
-        <v-img 
-          alt="Vuetify Logo"
-          src="../assets/talent.png"
-          transition="scale-transition"
-          width="170"
-         
-        /> 
-       </div>
- <nav class="navbaa"> 
-<div >
+  <div class="flexdisplay" >
+   
+              <div @click="scroll('project')" class="logo dropdown">
+                  <v-img 
+                    alt="Vuetify Logo"
+                    src="../assets/talent.png"
+                    transition="scale-transition"
+                    width="180"
+                    
+                  
+                  /> 
+                </div>
+                <!-- <router-link class="btn btn-light btn-outline-primary"
+                to="/">Home</router-link> -->
 
- <li  id="course" class="dropdown" ><a  href="#">Outsourcing<span class="caret"></span></a>
+     <div @click="scroll('HomeView')" id="course" class="flex-items dropdown navbarclass" ><a  href="#">Outsourcing<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                <li id="sub-dropdown" class="dropdown"><a href="#">Why work with us<span style="margin-left: 43px;" class="glyphicon glyphicon-chevron-right"></span> </a>
+                  <ul id="sub-dropdown-menu" class="dropdown-menu">
+                    <div>
+                    <div><h1>Save cost & time with our Talented team of Developers</h1></div> 
+                    <div><p>Reduce development cost and leverage the vast pool of talent by offshoring</p></div>
+                    </div>
+                  </ul>
+                </li>
+                    <li><a href="#">Apply as developer</a></li>
+                    <li><a href="#">Hire developers</a></li>
+                </ul>
+                    
+                    </div>
+                    
+     <div id="course" class="flex-items dropdown navbarclass"><a  href="#">IT Services<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">SEO</a></li>
-          <li><a href="#">A.I</a></li>
-          <li><a href="#">M.L</a></li>
-          <li><a href="#">Graphics</a></li>
-          <li id="sub-dropdown" class="dropdown"><a href="#">web Design<span style="margin-left: 43px;" class="glyphicon glyphicon-chevron-right"></span> </a>
-        <ul id="sub-dropdown-menu" class="dropdown-menu">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">Bootstrap 3</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Angular</a></li>
-        </ul>
-      </li></ul>
-          </li>
+                    <li><a href="#">DEVOPS</a></li>
+                    <li><a href="#">Custome Software</a></li>
+                 </ul>
           </div>
-<div class="menu-item"><a href="#">IT Services</a></div>
-
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Gallery</a></li>
-        <li  id="course" class="dropdown" ><a  href="#">Gallery<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">SEO</a></li>
-            <li><a href="#">A.I</a></li>
-            <li><a href="#">M.L</a></li>
-            <li><a href="#">Graphics</a></li>
-            <li id="sub-dropdown" class="dropdown"><a href="#">web Design<span style="margin-left: 43px;" class="glyphicon glyphicon-chevron-right"></span> </a>
-          <ul id="sub-dropdown-menu" class="dropdown-menu">
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">Bootstrap 3</a></li>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">Angular</a></li>
+     <div id="course" class="flex-items dropdown navbarclass" ><a  href="#">Coworking<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Coworking</a></li>
+            <li><a href="#">Private office</a></li>
+            <li><a href="#">Meeting Room</a></li>
+            <li><a href="#">Events space</a></li>
+           
+        </ul>
+          </div>
+     <div id="course" class="flex-items dropdown navbarclass" ><a  href="#">About Us<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Testimonials</a></li>
           </ul>
-        </li></ul>
-      </li>
-      
-      </ul>
-    </div>
+          </div>
   
+  </div>
 
-
-
-<Dropdown title="Campus" :items="services"/>
-<div class="menu-item"><a href="#">Coworking</a></div>
-<div class="menu-item"><a href="#">About Us</a></div>
-</nav>
-  </header>
 </template>
 
-<script>
-import Dropdown from './Dropdown.vue'
-export default {
-    name: "nav-bar",
-    components: {
-         Dropdown 
-         },
-    data() {
-        return {
-            services: [
-                {
-                    title: "web",
-                    link: "#"
-                },
-                {
-                    title: "Design",
-                    link: "#"
-                },
-                {
-                    title: "Videos",
-                    link: "#"
-                },
-            ]
-        };
-    },
 
-  methods: {
-    scroll(refName) {
-      const element = document.getElementById(refName);
-      element.scrollIntoView({ behavior: "smooth" });
-    },
-  },
-};
+<script>
+
 </script>
 
+
 <style>
-
-header{
-  background-color:white;
-}
+     
 .logo{
-  padding-left: 80px;
-}
-.navbaa{ 
-  background-color: #1BC85F;
+  padding-left: 400px;
 }
 
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-nav .menu-item{
-color: black;
-padding: 10px 20px;
-position: relative;
-text-align: center;
-border-bottom: 3px solid transparent;
-display: flex;
-transition: 0.4s;
-}
-nav .menu-item:active,
-nav .menu-item:hover {
-background-color:green;
-border-color: #7E7574;
-}
-nav .menu-item a{
-    color: inherit;
-    text-decoration: none;
-}
-
-
-
-
-
-
+.flexdisplay { 
+display: flex; 
+background-color: aliceblue; 
+align-items: center;
+ } 
+ .navbarclass{ 
+   left: 300px;
+ }
+.flex-items { 
+  margin: 21px;
+  text-align: center; 
+  
+} 
 
 .navbar-inverse{
 	background-color: #2a84eb ;

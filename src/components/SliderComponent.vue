@@ -27,11 +27,11 @@ body {
 }
 
 .hero-image {
-  top: 70%;
+  top: 80%;
   background-image:url(https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/blogs/20966/images/deR2bgwHQd2rG6B2PNLq_gds._blog_Backyard_Forest_Garden_Design_Ideas_Planting_areas.jpg);
   background-color: #cccccc;
-  height: 500px;
-  width:89%;
+  height:600px;
+  width:100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,7 +42,7 @@ body {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 85%;
+  top: 88%;
   left: 59%;
   transform: translate(-50%, -50%);
   color:#010206 ;

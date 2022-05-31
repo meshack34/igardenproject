@@ -5,14 +5,12 @@
             <ul class="navbar-nav">
 
             <li class="nav-item m-1">
-            
-                <button type="button"
-                class="appybuttons1 btn-primary m-5 fload-end"
+             <router-link class="appybuttons1 router-link-primary m-5 fload-end"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal2"
-                @click="addClick()">
-                Recruit Talented Developer
-                </button>
+                to="/">Recruit Talented Developer</router-link> 
+
+               
             
             </li>
          

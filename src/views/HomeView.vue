@@ -6,7 +6,7 @@
     <v-container fluid>
       <v-row>
       <div class="homepage">
-        <v-col cols="7" class="ourimage">
+        <v-col cols="7" >
               <SliderComponent />
    
         </v-col>
@@ -26,12 +26,14 @@
   </div>
   <div><recruit/></div>
  </div>
-  
-        </v-col></div>
+
+   </v-col>
+   </div>
 
         <v-col cols="12" class="padd">
          <ITServices/>
         </v-col>
+
         <v-col md="3" offset-md="3" id="about">
           <h4 class="white--text">FEATURED PROJECTS</h4>
           <p class="grey--text">Lorem ipsum dolor Lorem ipsum dolor</p>
@@ -39,6 +41,7 @@
         <v-col md="3" class="text-end">
           <v-btn tile color="#A7121D" dark> View All </v-btn>
         </v-col>
+        
         <v-col md="3" offset-md="3">
           <v-card
             class="pa-2 py-12"
@@ -116,46 +119,9 @@
             <v-icon right>mdi-arrow-right</v-icon>
           </v-btn>
         </v-col>
-        <v-col cols="12" class="padd topInverse">
-          <div class="second">
-            <div class="secondchild1" id="contact">
-              <v-row>
-                <v-col cols="7">
-                  <h1 class="white--text">
-                    Let's work together on<br />your next project
-                  </h1>
-                  <p class="grey--text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eius nesciunt ducimus natus <br />
-                  </p>
-                </v-col>
-                <v-col cols="5">
-                  <v-btn tile color="#A7121D" dark class="mt-16">
-                    Contact
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </div>
-          </div>
-          <v-toolbar class="topTolbar" color="#111111" dark flat>
-            <div
-              style="
-                position: absolute;
-                margin-left: auto;
-                margin-right: auto;
-                left: 0;
-                right: 0;
-                text-align: center;
-              ">
-              <v-btn text>Home</v-btn>
-              <v-btn text>Project</v-btn>
-              <v-btn text>about</v-btn>
-              <v-btn text> contact</v-btn>
-            </div>
-          </v-toolbar>
 
 
-        </v-col>
+
       </v-row>
     </v-container>
 
@@ -193,17 +159,21 @@ import Apply from '@/components/apply.vue';
 <style scoped>
 .homepage{ 
   display: flex;
+  height: 700px;
+  background-color: beige;
 }
 .part2{ 
-  margin-top: 180px;
+  margin-top: 200px;
+  height: 240px;
+  padding-left: 150px;
 }
 .texthome{
 padding-left: 140px;
-
 color:#010206 ;
 }
 .appnow{ 
   display: flex;
+  padding-left: 100px;
 }
 
 
@@ -219,7 +189,7 @@ color:#010206 ;
 }
 .second {
   width: 100%;
-  height: 400px;
+  height: 600px;
   background: #181818;
   text-align: center;
   padding: 2rem 2rem;
