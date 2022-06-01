@@ -1,22 +1,19 @@
 <template>
+<div class="mynavclass"> 
   <div class="flexdisplay" >
-   
               <div @click="scroll('project')" class="logo dropdown">
-                  <v-img 
+                  <router-link to="/"> <v-img 
                     alt="Vuetify Logo"
                     src="../assets/talent.png"
                     transition="scale-transition"
-                    width="180"
-                    
-                  
-                  /> 
+                    width="200"
+             
+                  /> </router-link>
                 </div>
-                <!-- <router-link class="btn btn-light btn-outline-primary"
-                to="/">Home</router-link> -->
 
-     <div @click="scroll('HomeView')" id="course" class="flex-items dropdown navbarclass" ><a  href="#">Outsourcing<span class="caret"></span></a>
+     <div @click="scroll('/')" id="course" class="flex-items dropdown navbarclass" ><router-link to="/">Outsourcing<span class="caret"></span></router-link>
                   <ul class="dropdown-menu">
-                <li id="sub-dropdown" class="dropdown"><a href="#">Why work with us<span style="margin-left: 43px;" class="glyphicon glyphicon-chevron-right"></span> </a>
+                <li id="sub-dropdown" class="dropdown"><router-link to="/whyworkwithus">Why work with us<span style="margin-left: 43px;" class="glyphicon glyphicon-chevron-right"></span> </router-link>
                   <ul id="sub-dropdown-menu" class="dropdown-menu">
                     <div>
                     <div><h1>Save cost & time with our Talented team of Developers</h1></div> 
@@ -24,38 +21,40 @@
                     </div>
                   </ul>
                 </li>
-                    <li><a href="#">Apply as developer</a></li>
-                    <li><a href="#">Hire developers</a></li>
+                    <li><router-link to="/apply">Apply as developer</router-link></li>
+                    <li><router-link to="/recruit">Hire developers</router-link></li>
                 </ul>
                     
                     </div>
-                    
-     <div id="course" class="flex-items dropdown navbarclass"><a  href="#">IT Services<span class="caret"></span></a>
+    <div id="course" class="flex-items dropdown navbarclass"><router-link to="/Courses">Courses<span></span></router-link>
+          
+          </div>
+     <div id="course" class="flex-items dropdown navbarclass"><router-link to="/ITServices">IT Services<span class="caret"></span></router-link>
         <ul class="dropdown-menu">
-                    <li><a href="#">DEVOPS</a></li>
-                    <li><a href="#">Custome Software</a></li>
+                    <li><router-link to="/CustomeSoftware">Custome Software</router-link></li>
+                    <li><router-link to="/DEVOPS">DEVOPS</router-link></li>
                  </ul>
           </div>
-     <div id="course" class="flex-items dropdown navbarclass" ><a  href="#">Coworking<span class="caret"></span></a>
+     <div id="course" class="flex-items dropdown navbarclass" ><router-link to="/Coworking"> Coworking <span class="caret"></span></router-link>
         <ul class="dropdown-menu">
-            <li><a href="#">Coworking</a></li>
-            <li><a href="#">Private office</a></li>
-            <li><a href="#">Meeting Room</a></li>
-            <li><a href="#">Events space</a></li>
+                    <li><router-link to="/Coworking">Coworking</router-link></li>
+                    <li><router-link to="/PrivateOffice">Private office</router-link></li>
+                    <li><router-link to="/MeetingRoom">Meeting Room</router-link></li>
+                    <li><router-link to="/EventsSpace">Events space</router-link></li>
            
         </ul>
           </div>
-     <div id="course" class="flex-items dropdown navbarclass" ><a  href="#">About Us<span class="caret"></span></a>
+     <div id="course" class="flex-items dropdown navbarclass" ><router-link to="/AboutUs">AboutUs<span class="caret"></span></router-link>
         <ul class="dropdown-menu">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Our Team</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Testimonials</a></li>
+                    <li><router-link to="/AboutUs">AboutUs</router-link></li>
+                    <li><router-link to="/OurTeam">OurTeam</router-link></li>
+                    <li><router-link to="/PrivacyPolicy">PrivacyPolicy</router-link></li>
+                    <li><router-link to="/Testimonials">Testimonials</router-link></li>
           </ul>
           </div>
   
   </div>
-
+</div>
 </template>
 
 
@@ -65,9 +64,11 @@
 
 
 <style>
-     
+ .mynavclass{ 
+  padding: 2px;
+    }
 .logo{
-  padding-left: 400px;
+  padding-left: 390px;
 }
 
 .flexdisplay { 

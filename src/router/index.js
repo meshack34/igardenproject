@@ -1,8 +1,37 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import department from "../components/department.vue";
-import employee from "../components/employee.vue";
+
+import whyworkwithus from "../components/whyworkwithus.vue"
+import apply from "../components/apply.vue";
+import recruit from "../components/recruit.vue";
+
+
+import Campus from "../components/Campus.vue"
+import learnincampus from "../components/learnincampus.vue"
+import learnOnline from "../components/learnOnline.vue"
+
+
+import Courses from "../components/Courses.vue"
+import ITServices from "../components/ITServices.vue"
+import DEVOPS from "../components/DEVOPS.vue"
+import CustomeSoftware from "../components/CustomeSoftware.vue"
+
+
+import Coworking from "../components/Coworking.vue"
+import PrivateOffice from "../components/PrivateOffice.vue"
+import MeetingRoom from "../components/MeetingRoom.vue"
+import EventsSpace from "../components/EventsSpace.vue"
+
+
+import AboutUs from "../components/AboutUs.vue"
+import OurTeam from "../components/OurTeam.vue"
+import PrivacyPolicy from "../components/PrivacyPolicy.vue"
+import Testimonials from "../components/Testimonials.vue"
+
+
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,15 +41,109 @@ const routes = [
     component: HomeView
   },
   {
-    name: "employee",
-    component: employee,
-    path: "/s",
+    name: "whyworkwithus",
+    component: whyworkwithus,
+    path: "/whyworkwithus",
   },
   {
-    name: "department",
-    component: department,
-    path: "/department",
+    name: "apply",
+    component: apply,
+    path: "/apply",
   },
+  {
+    name: "recruit",
+    component: recruit,
+    path: "/recruit",
+  },
+
+
+  {
+    name: "Courses",
+    component: Courses,
+    path: "/Courses",
+  },
+
+  {
+    name: "Campus",
+    component: Campus,
+    path: "/Campus",
+  },
+  {
+    name: "learnOnline",
+    component: learnOnline,
+    path: "/whyworkwithus",
+  },
+  {
+    name: "learnincampus",
+    component: learnincampus,
+    path: "/learnincampus",
+  },
+
+
+
+  {
+    name: "ITServices",
+    component: ITServices,
+    path: "/ITServices",
+  },
+  {
+    name: "DEVOPS",
+    component: DEVOPS,
+    path: "/DEVOPS",
+  },
+  {
+    name: "CustomeSoftware",
+    component: CustomeSoftware,
+    path: "/CustomeSoftware",
+  },
+
+
+  {
+    name: "Coworking",
+    component: Coworking,
+    path: "/Coworking",
+  },
+  {
+    name: "PrivateOffice",
+    component: PrivateOffice,
+    path: "/PrivateOffice",
+  },
+  {
+    name: "MeetingRoom",
+    component: MeetingRoom,
+    path: "/MeetingRoom",
+  },
+  {
+    name: "EventsSpace",
+    component: EventsSpace,
+    path: "/EventsSpace",
+  },
+
+
+  {
+    name: "AboutUs",
+    component: AboutUs,
+    path: "/AboutUs",
+  },
+  {
+    name: "OurTeam",
+    component: OurTeam,
+    path: "/OurTeam",
+  },
+  {
+    name: "PrivacyPolicy",
+    component: PrivacyPolicy,
+    path: "/PrivacyPolicy",
+  },
+  {
+    name: "Testimonials",
+    component: Testimonials,
+    path: "/Testimonials",
+  },
+
+
+
+ 
   {
     path: '/about',
     name: 'about',

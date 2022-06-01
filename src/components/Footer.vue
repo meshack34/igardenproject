@@ -1,9 +1,9 @@
 <template>
-<div class="container my-5">
-  <!-- Footer -->
+<div class="container1">
+  
+  
   <footer
-          class="text-center text-lg-start text-white"
-          style="background-color: #929fba"
+          class="text-center text-white"
           >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
@@ -12,34 +12,24 @@
         <!--Grid row-->
         <div class="row">
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
-              Company name
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
-            </p>
+          <div class="logo col-md-3 col-lg-3 col-xl-3 mx-auto mt-3" @click="scroll('project')">
+                  <router-link to="/"> <v-img 
+                    alt="Vuetify Logo"
+                    src="../assets/talent.png"
+                    transition="scale-transition"
+                    width="200"
+             
+                  /> </router-link>
+            
           </div>
-          <!-- Grid column -->
+          
 
           <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>NGONG RACE COURSE GOLF AND JOCKEY CLUB</p>
             <p>
-              <a class="text-white">MDBootstrap</a>
-            </p>
-            <p>
-              <a class="text-white">MDWordPress</a>
-            </p>
-            <p>
-              <a class="text-white">BrandFlow</a>
-            </p>
-            <p>
-              <a class="text-white">Bootstrap Angular</a>
+            <a class="text-white">Ngong Road</a><br>
+              <a class="text-white">Nairobi, Kenya</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -47,33 +37,22 @@
           <hr class="w-100 clearfix d-md-none" />
 
           <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none" />
 
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          <p> <router-link to="/AboutUs"><i class="text-white">Apply as developer</i></router-link></p>
+          <p> <router-link to="/recruit"><i class="text-white">Hire developers</i></router-link></p>
+          <p>  <router-link to="/Coworking"><i class="text-white"> Coworking </i> </router-link></p>
+          <p>  <router-link to="/Courses"><i class="text-white">Courses</i></router-link></p>
+           <p> <router-link to="/CustomeSoftware"><i class="text-white">IT Services</i></router-link></p>
+           <p> <router-link to="/AboutUs"><i class="text-white">AboutUs</i></router-link></p>
           </div>
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-
-            <v-card
-      flat
-      tile
-      class="black white--text py-5 px-5 text-center"
-      
-    >
-      <v-row>
-      
-
-        <v-col cols="12" sm="4">
-          <v-card-text class="pt-2">
+          <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
+<v-row>
+    <h6 class="socialmedia">Follow us</h6> <br>
             <v-btn
               mdi-facebook
               v-for="icon in icons"
@@ -81,17 +60,11 @@
               class="mx-1 white--text"
               icon
             >
-              <v-icon size="24px">
+              <v-icon size="30px">
                 {{ icon }}
               </v-icon>
             </v-btn>
-          </v-card-text>
-        </v-col>
-
-       
       </v-row>
-    </v-card>
-
             
           </div>
         </div>
@@ -102,14 +75,12 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div
+    <div 
          class="text-center p-3"
          style="background-color: rgba(0, 0, 0, 0.2)"
          >
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/"
-         >MDBootstrap.com</a
-        >
+      © 2021 Copyright |
+    <router-link to="/PrivacyPolicy"><i class="text-white">   Privacy Policy</i></router-link>
     </div>
     <!-- Copyright -->
   </footer>
@@ -127,3 +98,17 @@ export default {
   })
 };
 </script>
+
+<style>
+.container1{ 
+  width: 100%;
+  background: #333;
+  color: white;
+}
+.socialmedia{ 
+  font-size: larger;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 50px;
+}
+</style>
