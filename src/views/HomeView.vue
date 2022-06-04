@@ -22,22 +22,22 @@
    </div> 
  <div class="appnow">
  <div > 
- <button type="button" class=" btn  btn-success m-2 fload-end"
+ <button type="button" class="ourbuttons btn  btn-success m-2 fload-end"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 @click="addClick()">
-                Apply As Developer
+                  Apply As Developer
                 </button>
   <!-- <Apply/> -->
   </div>
 
   <div>
   <!-- <recruit/> -->
-   <button type="button" class=" btn  btn-success m-2 fload-end"
+            <button type="button" class="ourbuttons btn  btn-success m-2 fload-end"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 @click="addClick()">
-                Apply As Developer
+                Hire Talented Developers
                 </button>
   </div>
   
@@ -46,22 +46,37 @@
    </v-col>
    </div>
 
-        <v-col cols="12" class="padd">
-         <whyworkwithus/>
-        </v-col>
 
         <v-col cols="12" class="padd">
-         <ITServices/>
-        </v-col>
+        <div>
+<div class="newimage">
+  <v-col cols="6" class="textside" >     
+   <h1>To Stay On Top of Changes in the Competitive Workplace<br>The soft skills are important</h1> 
+                  <p class=" ml-3 mt-6">
+                    Nurturing the tech skills by helping the developers<br>
+                     with the necesary skills through training
+                  </p>
+                <button type="button" class="ourbuttons btn  btn-success m-2 fload-end"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                @click="addClick()">
+                Learn more
+                </button>
+                </v-col>
+               <v-col cols="4" class="imageside" >     
+            <v-img src="Client.jpg" class="imagesidemain" ></v-img>
+                <h1>What makes us unique</h1>
+                  <p class=" ml-3 mt-6">
+                    Work within the greenest space in nairobi, excellent outdoor gazebos, <br>
+                    The space is set to give you clean, quiet and wellness centered co-working and training space<br>
+                  </p></v-col>
+  
+</div>
+</div>
+         </v-col>
 
-        <v-col md="3" offset-md="3" id="about">
-          <h4 class="white--text">FEATURED PROJECTS</h4>
-          <p class="grey--text">Lorem ipsum dolor Lorem ipsum dolor</p>
-        </v-col>
-        <v-col md="3" class="text-end">
-          <v-btn tile color="#A7121D" dark> View All </v-btn>
-        </v-col>
-        
+<v-col cols="12" class="ourservices">
+    <h1 class="">Our Services</h1>  
         <v-col md="3" offset-md="3">
           <v-card
             class="pa-2 py-12"
@@ -140,7 +155,7 @@
           </v-btn>
         </v-col>
 
-
+</v-col>
 
       </v-row>
     </v-container>
@@ -158,8 +173,6 @@
   import Navbar from '../components/Navbar'
   import Footer from '../components/Footer.vue'
   import SliderComponent from "../components/SliderComponent.vue";
- import ITServices from "../components/ITServices.vue";
-import whyworkwithus from "../components/whyworkwithus.vue";
 // import recruit from "../components/recruit.vue"
 // import Apply from '@/components/apply.vue';
   export default {
@@ -169,10 +182,8 @@ import whyworkwithus from "../components/whyworkwithus.vue";
     Navbar,
     Footer,
     SliderComponent,
-    whyworkwithus,
     // recruit,
     // Apply,
-    ITServices,
 },
   }
 </script>
@@ -181,22 +192,77 @@ import whyworkwithus from "../components/whyworkwithus.vue";
 .homepage{ 
   display: flex;
   height: 780px;
-  background-color: red;
+  background-color:#f8f8ff;
 }
 .part2{ 
   margin-top: 250px;
-  
   padding-left: 120px;
 }
 .texthome{
 padding-left: 40px;
-color:green ;
 margin-bottom:  30px;
 }
 .appnow{ 
   display: flex;
-  padding-left: 130px;
+  padding-left: 40px;
 }
+
+
+.newimage{
+  background-color: #B6F9A4 ;
+  top: 80%;
+  height:590px;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+ 
+}
+
+.textside {
+  text-align: center;
+  color: black;
+  padding-top:90px;
+  padding-left: 200px;
+}
+.imageside {
+  padding-right: 150px;
+  text-align: center;
+  
+}
+.imagesidemain{ 
+  border-radius: 50%; /* Used if the image is unavailable */
+  height: 390px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
+.ourbuttons{ 
+  background-color:#48F01B ; 
+  border: none;
+  color: white;
+  padding: 13px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.ourservices{ 
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color:  ;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
 
 .top {
   margin-top: 180px;

@@ -13,7 +13,6 @@
           <p class="grey--text">Lorem ipsum dolor Lorem ipsum dolor</p>
         </v-col>
         <v-col md="3" class="text-end">
-          <v-btn tile color="#A7121D" dark> View All </v-btn>
         </v-col>
         
         <v-col md="3" offset-md="3">
