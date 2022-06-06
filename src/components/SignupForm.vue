@@ -1,185 +1,98 @@
 <template>
-
-<div>
-      <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-            <ul class="navbar-nav">
-
-            <li class="nav-item m-1">
-            
-                <button type="button" class="btn  btn-success m-2 fload-end"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                @click="addClick()">
-                Apply As Developer
-                </button>
-                
-            
-            </li>
-         
-        
-          
-            </ul>
-        </nav>
-
-
-
-  <div class="modal fade" id="exampleModal" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-lg modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{modalTitle}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"
-        aria-label="Close"></button>
-    </div>
-
-    <div class="modal-body">
-    <div class="d-flex flex-row bd-highlight mb-3">
-        <div class="p-2 w-50 bd-highlight">
-            <div class="input-group mb-3">
-                <span class="input-group-text">First Name</span>
-                <input type="text" class="form-control" v-model="FirstName">
+    <form id="signup-form" v-on:submit.prevent="submit">
+        <div class="row">
+            <div class="col-12 form-group">
+                <label class="col-form-label col-form-label-lg">Full Name <span class="text-danger">*</span></label>
+                <input type="text" v-model.trim="$v.fullname.$model" :class="{'is-invalid': validationStatus($v.fullname)}" class="form-control form-control-lg">
+                <div v-if="!$v.fullname.required" class="invalid-feedback">The full name field is required.</div>
             </div>
-             <div class="input-group mb-3">
-                <span class="input-group-text">Last Name</span>
-                <input type="text" class="form-control" v-model="LastName">
+            <div class="col-12 form-group">
+                <label class="col-form-label col-form-label-lg">Email <span class="text-danger">*</span></label>
+                <input type="email" v-model.trim="$v.email.$model" :class="{'is-invalid': validationStatus($v.email)}" class="form-control form-control-lg">
+                <div v-if="!$v.email.required" class="invalid-feedback">The email field is required.</div>
+                <div v-if="!$v.email.email" class="invalid-feedback">The email is not valid.</div>
             </div>
-             <div class="input-group mb-3">
-                <span class="input-group-text">Phone Number</span>
-                <input type="text" class="form-control" v-model="PhoneNumber">
-            </div>
-             <div class="input-group mb-3">
-                <span class="input-group-text">Email</span>
-                <input type="email" class="form-control" v-model="Email">
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text">County</span>
-                <select class="form-select" v-model="Department">
-        
-                    <option v-for="dep in departments"
-                    :key="dep.id">
-                    {{dep.DepartmentName}}
-                    </option>
+            <div class="col-12 form-group">
+                <label class="col-form-label col-form-label-lg">Country <span class="text-danger">*</span></label>
+                <select v-model.trim="$v.country.$model" :class="{'is-invalid': validationStatus($v.country)}" class="form-control form-control-lg">
+                    <option value="">Select Country</option>
+                    <option :value="c.iso" :key="c.iso" v-for="c in countryList">{{ c.country }}</option>
                 </select>
+                <div v-if="!$v.country.required" class="invalid-feedback">The country field is required.</div>
             </div>
-
-            <div class="input-group mb-3">
-                <span class="input-group-text">DOJ</span>
-                <input type="date" class="form-control" v-model="DateOfJoining">
+            <div class="col-12 form-group">
+                <label class="col-form-label col-form-label-lg">Password <span class="text-danger">*</span></label>
+                <input type="password" v-model.trim="$v.password.$model" :class="{'is-invalid': validationStatus($v.password)}" class="form-control form-control-lg">
+                <div v-if="!$v.password.required" class="invalid-feedback">The password field is required.</div>
+                <div v-if="!$v.password.minLength" class="invalid-feedback">You must have at least {{ $v.password.$params.minLength.min }} letters.</div>
+                <div v-if="!$v.password.maxLength" class="invalid-feedback">You must not have greater then {{ $v.password.$params.maxLength.min }} letters.</div>
             </div>
-
+            <div class="col-12 form-group text-center">
+                <button class="btn btn-vue btn-lg col-4">Sign Up</button>
+            </div>
         </div>
-        <div class="p-2 w-50 bd-highlight">
-            <img width="250px" height="250px"
-                :src="PhotoPath+PhotoFileName"/>
-            <input class="m-2" type="file" @change="imageUpload">
-        </div>
-    </div>
-        <button type="button" @click="createClick()"
-        v-if="EmployeeId==0" class="btn btn btn-success">
-        Create
-        </button>
-      
-
-    </div>
-
-</div>
-</div>
-</div>
-
-
-</div>
-
-
-
-
+    </form>
 </template>
-
-<script >
-
-
-import axios from "axios"
+<script>
+import { required, email, minLength, maxLength } from 'vuelidate/lib/validators'
 export default {
-    // eslint-disable-next-line vue/multi-word-component-names
-    name: "Home",
-
- 
-    data(){
-    return{  
-        departments:[],
-        employees:[],
-        modalTitle:"",
-        EmplpoyeeId:0,
-        FirstName:"",
-        LastName:"",
-        PhoneNumber:"",
-        Email:"",
-        Department:"",
-        DateOfJoining:"",
-        PhotoFileName:"anonymous.png",
-        PhotoPath:"http://127.0.0.1:8000/photos/"
-    }
-},
-    methods:{
-    refreshData(){
-        axios.get("http://127.0.0.1:8000/employee")
-        .then((response)=>{
-            this.employees=response.data;
-        });
-
-        axios.get("http://127.0.0.1:8000/department")
-        .then((response)=>{
-            this.departments=response.data;
-        });
+    name: 'SignupForm',
+    data: function() {
+        return {
+            fullname: '', 
+            email: '', 
+            country: '', 
+            password: '',
+            countryList: []
+        }
+    }, 
+    validations: {
+        fullname: {required},
+        email: {required, email},
+        country: {required},
+        password: {required, minLength: minLength(6), maxLength: maxLength(18)}
     },
-    addClick(){
-        this.modalTitle="Add Employee";
-        this.EmployeeId=0;
-        this.FirstName="";
-        this.LastName="";
-        this.PhoneNumber="";
-        this.Email="";
-        this.Department="",
-        this.DateOfJoining="",
-        this.PhotoFileName="anonymous.png"
-    },
- 
-    createClick(){
-        axios.post("http://127.0.0.1:8000/employee",{
-            FirstName:this.FirstName,
-            LastName:this.LastName,
-            PhoneNumber:this.PhoneNumber,
-            Email:this.Email,
-            Department:this.Department,
-            DateOfJoining:this.DateOfJoining,
-            PhotoFileName:this.PhotoFileName
+
+    mounted: function() {
+        var v = this;
+        v.$http.get(`http://localhost:4600/countries`)
+        .then(function(resp) {
+            v.countryList = resp.data;
         })
-        .then((response)=>{
-            this.refreshData();
-            alert(response.data);
+        .catch(function(err) {
+            console.log(err)
         });
     },
 
-    imageUpload(event){
-        let formData=new FormData();
-        formData.append('file',event.target.files[0]);
-        axios.post(
-            "http://127.0.0.1:8000/employee/savefile",
-            formData)
-            .then((response)=>{
-                this.PhotoFileName=response.data;
-            });
+    methods: {
+
+        resetData: function() {
+            this.fullname = '';
+            this.email = '';
+            this.country = '';
+            this.password = '';
+        },
+
+        validationStatus: function(validation) {
+            return typeof validation != "undefined" ? validation.$error : false;
+        },
+
+        submit: function() {
+
+            this.$v.$touch();
+            if (this.$v.$pendding || this.$v.$error) return;
+
+            alert('Data Submit');
+            this.$v.$reset();
+            this.resetData();
+        }
     }
-
-},
-mounted:function(){
-    this.refreshData();
-}
-
 }
 </script>
-
-
-
 <style>
+.btn-vue{
+    background: #53B985;
+    color: #31485D;
+    font-weight: bold;
+}
 </style>

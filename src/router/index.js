@@ -5,7 +5,7 @@ import HomeView from '../views/HomeView.vue'
 import whyworkwithus from "../components/whyworkwithus.vue"
 import apply from "../components/apply.vue";
 import recruit from "../components/recruit.vue";
-
+import applications from "../components/applications.vue";
 
 import Campus from "../components/Campus.vue"
 import learnincampus from "../components/learnincampus.vue"
@@ -49,6 +49,11 @@ const routes = [
     name: "apply",
     component: apply,
     path: "/apply",
+  },
+  {
+    name: "applications",
+    component: applications,
+    path: "/applications",
   },
   {
     name: "recruit",

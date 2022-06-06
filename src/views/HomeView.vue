@@ -22,23 +22,16 @@
    </div> 
  <div class="appnow">
  <div > 
- <button type="button" class="ourbuttons btn  btn-success m-2 fload-end"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                @click="addClick()">
-                  Apply As Developer
-                </button>
+
+ <router-link class="ourbuttons btn  btn-success m-2 fload-end" to="/applications"> Apply As Developer</router-link>
+         
   <!-- <Apply/> -->
   </div>
 
   <div>
   <!-- <recruit/> -->
-            <button type="button" class="ourbuttons btn  btn-success m-2 fload-end"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                @click="addClick()">
-                Hire Talented Developers
-                </button>
+   <router-link class="ourbuttons btn  btn-success m-2 fload-end" to="/Coworking">Hire Talented Developers</router-link>
+         
   </div>
   
  </div>
@@ -76,84 +69,15 @@
          </v-col>
 
 <v-col cols="12" class="ourservices">
-    <h1 class="">Our Services</h1>  
-        <v-col md="3" offset-md="3">
-          <v-card
-            class="pa-2 py-12"
-            outlined
-            tile
-            height="250px"
-            color="#1E1E1E"
-          >
-            <v-img src="3.png" contain max-height=""></v-img>
-          </v-card>
-        </v-col>
-        <v-col md="3">
-          <v-card
-            class="pa-2 py-12"
-            outlined
-            tile
-            height="250px"
-            color="#1E1E1E"
-          >
-            <v-img src="2.png" contain max-height=""></v-img>
-          </v-card>
-        </v-col>
-        <v-col md="3" offset-md="3">
-          <v-btn color="white" dark text class="ml-n4"> The Vintage </v-btn
-          ><br />
-
-          <v-btn color="#A7121D" dark text class="ml-n4">
-            know more
-            <v-icon right>mdi-arrow-right</v-icon>
-          </v-btn>
-        </v-col>
-        <v-col md="3">
-          <v-btn color="white" dark text class="ml-n4"> Foodasa </v-btn><br />
-
-          <v-btn color="#A7121D" dark text class="ml-n4">
-            know more
-            <v-icon right>mdi-arrow-right</v-icon>
-          </v-btn>
-        </v-col>
-        <v-col md="3" offset-md="3">
-          <v-card
-            class="pa-2 py-12"
-            outlined
-            tile
-            height="250px"
-            color="#1E1E1E"
-          >
-            <v-img src="4.png" contain max-height=""></v-img>
-          </v-card>
-        </v-col>
-        <v-col md="3">
-          <v-card
-            class="pa-2 py-12"
-            outlined
-            tile
-            height="250px"
-            color="#1E1E1E"
-          >
-            <v-img src="5.png" contain max-height=""></v-img>
-          </v-card>
-        </v-col>
-        <v-col md="3" offset-md="3">
-          <v-btn color="white" dark text class="ml-n4"> AAE IdeaPro </v-btn
-          ><br />
-
-          <v-btn color="#A7121D" dark text class="ml-n4">
-            know more
-            <v-icon right>mdi-arrow-right</v-icon>
-          </v-btn>
-        </v-col>
-        <v-col md="3">
-          <v-btn color="white" dark text class="ml-n4"> Mozaik </v-btn><br />
-          <v-btn color="#A7121D" dark text class="ml-n4">
-            know more
-            <v-icon right>mdi-arrow-right</v-icon>
-          </v-btn>
-        </v-col>
+<h1> Our service</h1>
+    <div class="mainservice">
+  
+    <div>  <v-img src="hostevents1.jpg"></v-img>
+                <h1>What makes us unique</h1>
+                  <p class="servetext">
+                  </p>
+                  </div>
+    </div>
 
 </v-col>
 
@@ -252,17 +176,20 @@ margin-bottom:  30px;
 }
 
 .ourservices{ 
-  text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background-color:  ;
-  width:100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width:100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #A0A1A7 ;
 
 }
 
+.mainservice{
+  display: flex;
+}
 
 .top {
   margin-top: 180px;

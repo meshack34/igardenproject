@@ -21,8 +21,7 @@
             outlined
             tile
             height="250px"
-            color="#1E1E1E"
-          >
+            color="#1E1E1E" >
             <v-img src="3.png" contain max-height=""></v-img>
           </v-card>
         </v-col>

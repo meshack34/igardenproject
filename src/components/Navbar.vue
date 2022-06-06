@@ -21,7 +21,7 @@
                     </div>
                   </ul>
                 </li>
-                    <li><router-link to="/apply">Apply as developer</router-link></li>
+                    <li><router-link to="/applications">Apply as developer</router-link></li>
                     <li><router-link to="/recruit">Hire developers</router-link></li>
                 </ul>
                     
