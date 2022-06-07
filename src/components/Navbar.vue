@@ -6,9 +6,7 @@
                     alt="Vuetify Logo"
                     src="../assets/talent.png"
                     transition="scale-transition"
-                    width="200"
-             
-                  /> </router-link>
+                    width="200"/></router-link>
                 </div>
 
      <div @click="scroll('/')" id="course" class="flex-items dropdown navbarclass" ><router-link to="/">Outsourcing<span class="caret"></span></router-link>
@@ -22,7 +20,7 @@
                   </ul>
                 </li>
                     <li><router-link to="/applications">Apply as developer</router-link></li>
-                    <li><router-link to="/recruit">Hire developers</router-link></li>
+                    <li><router-link to="/hiredevelopers">Hire developers</router-link></li>
                 </ul>
                     
                     </div>

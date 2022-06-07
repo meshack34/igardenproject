@@ -2,17 +2,13 @@
   <v-app id="home" :style="{ background: $vuetify.theme.themes.dark.background }">
      <Navbar/>
     <v-container class="ourcontainer"> 
-    <h1 class="developerheader">Apply as developer</h1>
+    <h1 class="developerheader">Hire developers</h1>
     <div class="applicationsclass">
     <div class="applicationdiv">
         <div class="">
               <div class="inputgroups">
-                <label class="inputgrouptext">First Name :</label>
-                <input type="text" v-model="FirstName" class="form-control form-control-lg" placeholder="First Name"><br>
-            </div>
-             <div class="inputgroups">
-                <span class="inputgrouptext">Last Name :</span>
-                <input type="text" class="form-control form-control-lgzz" v-model="LastName" placeholder="Last Name"><br>
+                <label class="inputgrouptext">Company Name :</label>
+                <input type="text" v-model="CompanyName" class="form-control form-control-lg" placeholder="Company Name"><br>
             </div>
              <div class="inputgroups">
                 <span class="inputgrouptext">Phone Number :</span>
@@ -21,6 +17,10 @@
              <div class="inputgroups"></div>
                 <span class="inputgrouptext">Email :</span>
                 <input type="email" class="form-control" v-model="Email" placeholder="Email"><br>
+            </div>
+            <div class="inputgroups">
+            <span class="inputgrouptext">Job Title :</span>
+                <input type="email" class="form-control" v-model="JobTitle" placeholder="Job Title"><br>
             </div>
             <div class="inputgroups">
             <span class="inputgrouptext">Other Details :</span>
@@ -39,7 +39,7 @@
         </div><br>
          <button type="button" @click="createClick()"
         v-if="EmployeeId!=0" class="ourbuttons">
-        Apply as developer
+        Hire developers
         </button>
     </div>
     </div>

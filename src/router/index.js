@@ -6,6 +6,8 @@ import whyworkwithus from "../components/whyworkwithus.vue"
 import apply from "../components/apply.vue";
 import recruit from "../components/recruit.vue";
 import applications from "../components/applications.vue";
+import hiredevelopers from "../components/hiredevelopers.vue";
+
 
 import Campus from "../components/Campus.vue"
 import learnincampus from "../components/learnincampus.vue"
@@ -54,6 +56,12 @@ const routes = [
     name: "applications",
     component: applications,
     path: "/applications",
+  },
+  {
+    name: "hiredevelopers",
+    component: hiredevelopers,
+    path: "/hiredevelopers",
+
   },
   {
     name: "recruit",

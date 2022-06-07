@@ -23,14 +23,14 @@
  <div class="appnow">
  <div > 
 
- <router-link class="ourbuttons btn  btn-success m-2 fload-end" to="/applications"> Apply As Developer</router-link>
+ <router-link class="ourbutton btn  btn-success m-2 fload-end" to="/applications"> Apply As Developer</router-link>
          
   <!-- <Apply/> -->
   </div>
 
   <div>
   <!-- <recruit/> -->
-   <router-link class="ourbuttons btn  btn-success m-2 fload-end" to="/Coworking">Hire Talented Developers</router-link>
+   <router-link class="ourbutton btn  btn-success m-2 fload-end" to="/hiredevelopers">Hire Talented Developers</router-link>
          
   </div>
   
@@ -49,7 +49,7 @@
                     Nurturing the tech skills by helping the developers<br>
                      with the necesary skills through training
                   </p>
-                <button type="button" class="ourbuttons btn  btn-success m-2 fload-end"
+                <button type="button" class="ourbutton btn  btn-success m-2 fload-end"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 @click="addClick()">
@@ -164,7 +164,7 @@ margin-bottom:  30px;
   background-size: cover; 
 }
 
-.ourbuttons{ 
+.ourbutton{ 
   background-color:#48F01B ; 
   border: none;
   color: white;
@@ -173,6 +173,7 @@ margin-bottom:  30px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 40px;
 }
 
 .ourservices{ 
