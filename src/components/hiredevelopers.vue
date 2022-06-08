@@ -14,7 +14,7 @@
                 <span class="inputgrouptext">Phone Number :</span>
                 <input type="text" class="form-control" v-model="PhoneNumber" placeholder="Phone Number"><br>
             </div>
-             <div class="inputgroups"></div>
+             <div class="inputgroups">
                 <span class="inputgrouptext">Email :</span>
                 <input type="email" class="form-control" v-model="Email" placeholder="Email"><br>
             </div>
@@ -23,26 +23,20 @@
                 <input type="email" class="form-control" v-model="JobTitle" placeholder="Job Title"><br>
             </div>
             <div class="inputgroups">
-            <span class="inputgrouptext">Other Details :</span>
-                <textarea id="w3review" class="form-control" v-model="otherdetails" rows="4" cols="50" placeholder="Other Details"></textarea>
+            <span class="inputgrouptext">Requirements :</span>
+                <textarea id="w3review" class="form-control" v-model="Requirements" rows="4" cols="50" placeholder="Other Details"></textarea>
                 <br>
             </div>
-
-            <!-- <div class="inputgroups">
-                <span class="inputgrouptext">DATE:</span>
-                <input type="date" class="form-control" v-model="DateOfJoining" placeholder="Enter Date">
-            </div> -->
-
         <div class="inputgroupsinputgroups">
-              Upload Resume :
-            <input class="form-control" type="file" @change="imageUpload" >
+              Upload File :
+            <input class="form-control" type="file" @change="UploadFile" >
         </div><br>
          <button type="button" @click="createClick()"
-        v-if="EmployeeId!=0" class="ourbuttons">
+        v-if="HiredeveloperId!=0" class="ourbuttons">
         Hire developers
         </button>
     </div>
-    </div>
+    </div></div>
        
     </v-container>
 
@@ -67,46 +61,19 @@ export default {
   
     methods:{
     refreshData(){
-        axios.get("http://127.0.0.1:8000/employee")
+        axios.get("http://127.0.0.1:8000/hiredevelopers")
         .then((response)=>{
-            this.employees=response.data;
+            this.hires=response.data;
         });
-    },
-    addClick(){
-        this.modalTitle="Add Employee";
-        this.EmployeeId=0;
-        this.FirstName="";
-        this.LastName="";
-        this.PhoneNumber="";
-        this.Email="";
-        this.otherdetails="";
-        this.Department="",
-        this.PhotoFileName="anonymous.png"
     },
     createClick(){
-        axios.post("http://127.0.0.1:8000/employee",{
-            FirstName:this.FirstName,
-            LastName:this.LastName,
+        axios.post("http://127.0.0.1:8000/hiredevelopers",{
+            CompanyName:this.CompanyName,
             PhoneNumber:this.PhoneNumber,
             Email:this.Email,
-            otherdetails:this.otherdetails,
-            PhotoFileName:this.PhotoFileName
-        })
-        .then((response)=>{
-            this.refreshData();
-            alert(response.data);
-        });
-    },
-    updateClick(){
-        axios.put("http://127.0.0.1:8000/employee",{
-            EmployeeId:this.EmployeeId,
-            FirstName:this.FirstName,
-            LastName:this.LastName,
-            PhoneNumber:this.PhoneNumber,
-            Email:this.Email,
-            otherdetails:this.otherdetails,
-            Department:this.Department,
-            PhotoFileName:this.PhotoFileName
+            JobTitle:this.JobTitle,
+            Requirements:this.Requirements,
+            UploadFile:this.UploadFile
         })
         .then((response)=>{
             this.refreshData();
@@ -117,17 +84,14 @@ export default {
         let formData=new FormData();
         formData.append('file',event.target.files[0]);
         axios.post(
-            "http://127.0.0.1:8000/employee/savefile",
+            "http://127.0.0.1:8000/hiredevelopers/savefile",
             formData)
             .then((response)=>{
-                this.PhotoFileName=response.data;
+                this.UploadFile=response.data;
             });
     }
 
 },
-mounted:function(){
-    this.refreshData();
-}
 
 }
   

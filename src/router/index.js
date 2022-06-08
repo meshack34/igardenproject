@@ -24,6 +24,7 @@ import Coworking from "../components/Coworking.vue"
 import PrivateOffice from "../components/PrivateOffice.vue"
 import MeetingRoom from "../components/MeetingRoom.vue"
 import EventsSpace from "../components/EventsSpace.vue"
+import bookaspace from "../components/bookaspace.vue"
 
 
 import AboutUs from "../components/AboutUs.vue"
@@ -131,7 +132,12 @@ const routes = [
     component: EventsSpace,
     path: "/EventsSpace",
   },
-
+  {
+    name: "bookaspace",
+    component: bookaspace,
+    path: "/bookaspace",
+  },
+  
 
   {
     name: "AboutUs",

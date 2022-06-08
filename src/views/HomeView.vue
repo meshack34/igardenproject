@@ -49,12 +49,12 @@
                     Nurturing the tech skills by helping the developers<br>
                      with the necesary skills through training
                   </p>
-                <button type="button" class="ourbutton btn  btn-success m-2 fload-end"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                @click="addClick()">
-                Learn more
-                </button>
+
+          <router-link 
+          class="ourbutton btn  btn-success m-2 fload-end" 
+          to="/bookaspace">Learn more
+          </router-link>
+                
                 </v-col>
                <v-col cols="4" class="imageside" >     
             <v-img src="Client.jpg" class="imagesidemain" ></v-img>
