@@ -5,7 +5,6 @@
     
     <v-container fluid>
       <v-row>
-      <div class="homepage">
         <v-col cols="8" >
               <SliderComponent />
    
@@ -37,11 +36,9 @@
  </div>
 
    </v-col>
-   </div>
+   
 
-
-        <v-col cols="12" class="padd">
-        <div>
+  <div class="moreaboutigarden">
 <div class="newimage">
   <v-col cols="6" class="textside" >     
    <h1>To Stay On Top of Changes in the Competitive Workplace<br>The soft skills are important</h1> 
@@ -66,20 +63,58 @@
   
 </div>
 </div>
-         </v-col>
 
-<v-col cols="12" class="ourservices">
-<h1> Our service</h1>
     <div class="mainservice">
-  
-    <div>  <v-img src="hostevents1.jpg"></v-img>
-                <h1>What makes us unique</h1>
-                  <p class="servetext">
-                  </p>
-                  </div>
+    <h1> Our service</h1>
+  <div class="row">
+  <div class="column">
+    <img src="../assets/images/coworkingSpace.jpg" alt="Snow" class="imagecolumn">  
+    <div class="textcolumn"><h1>Coworking Space</h1>
+    <p>Host over 200 innovators</p></div>
+    <router-link 
+        class="ourbutton btn  btn-success m-2 fload-end" 
+        to="/bookaspace">Book a Space
+    </router-link>    
+  </div>
+  <div class="column">
+    <img src="../assets/images/privateOffice.jpg" alt="Forest" class="imagecolumn">
+    <h1>Coworking Space</h1>
+    <p>Have a dedicated space within the hub and access other amenities</p>
+    <router-link 
+        class="ourbutton btn  btn-success m-2 fload-end" 
+        to="/bookaspace">Book a Space
+    </router-link>
+  </div>
+  <div class="column">
+    <img src="../assets/images/Hostevents.jpg" alt="Mountains" class="imagecolumn">
+    <h1>Host Events</h1>
+    <p>Seminars, fireside chats</p>
+    <router-link 
+        class="ourbutton btn  btn-success m-2 fload-end" 
+        to="/bookaspace">Book a Space
+    </router-link>
+  </div>
+  <div class="column">
+    <img src="../assets/images/campus.jpg" alt="image" class="imagecolumn">
+    <h1>Campus</h1>
+    <p> Train and equip innovators and job seekers on trendy technologies</p>
+    <router-link 
+      class="ourbutton btn  btn-success m-2 fload-end" 
+      to="/bookaspace">Book a Space
+   </router-link>
+  </div>
+  <div class="column">
+    <img src="../assets/images/corporatepackages.jpg" alt="image" class="imagecolumn">
+    <h1>Corporate packages</h1>
+    <p>We outsource, build software applications for corporate</p>
+    <router-link 
+        class="ourbutton btn  btn-success m-2 fload-end" 
+        to="/bookaspace">Book a Space
+    </router-link>
+  </div>
+</div>
     </div>
 
-</v-col>
 
       </v-row>
     </v-container>
@@ -113,11 +148,7 @@
 </script>
 
 <style scoped>
-.homepage{ 
-  display: flex;
-  height: 780px;
-  background-color:#f8f8ff;
-}
+
 .part2{ 
   margin-top: 250px;
   padding-left: 120px;
@@ -132,16 +163,20 @@ margin-bottom:  30px;
 }
 
 
-.newimage{
+.moreaboutigarden{ 
+  
+position: relative;
   background-color: #B6F9A4 ;
-  top: 80%;
-  height:590px;
   width:100%;
-  background-position: center;
+}
+
+
+.newimage{
+  height:fit-content;
+  width:100%;
   background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
   display: flex;
+  padding-top: 30px;
  
 }
 
@@ -176,85 +211,53 @@ margin-bottom:  30px;
   border-radius: 40px;
 }
 
-.ourservices{ 
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    width:100%;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #A0A1A7 ;
-
-}
 
 .mainservice{
-  display: flex;
-}
-
-.top {
-  margin-top: 180px;
-}
-.topInverse {
-  margin-top: -250px;
-}
-.topTolbar {
-  margin-top: 100px;
+  width:100%;
+  position: relative;
+  background-color: #A0A1A7 ;
   text-align: center;
+  
 }
-.second {
-  width: 100%;
-  height: 600px;
-  background: #181818;
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  background-color: #fff;
+}    
+.row{ 
+align-items: center;
+justify-content: center;
+}
+.column {
+  float: left;
+  width: 230px;
+  padding: 15px;
+  background-color: #fff;
+  margin: 10px;
   text-align: center;
-  padding: 2rem 2rem;
+  align-items: center;
 }
-.secondchild1 {
-  display: inline-block;
-  background-color: #1e1e1e;
-  padding: 2rem 1rem;
-  vertical-align: middle;
-  text-align: left;
-  margin-top: 250px;
-}
-.child {
-  display: inline-block;
-  padding: 2rem 1rem;
-  vertical-align: middle;
-  text-align: left;
-  margin-right: 8px;
-}
-.bgColor1 {
-  background-color: #1e1e1e;
-}
-.bgColor2 {
-  background-color: #ce1d2a;
-}
-.child1 {
-  display: inline-block;
-  padding: 2rem 1rem;
-  vertical-align: middle;
-  margin-right: 5px;
-  width: 240px;
-}
-
-.mRight {
-  margin-right: 8px;
-}
-.mButton {
-  margin-bottom: 8px;
-}
-.padding {
-  padding: 8px 0;
-}
-.col-12.padd {
-  padding: 12px 0 !important;
-}
-.col-12.childcol {
-  padding: 0 !important;
-}
-h1.number {
+.column.h1{
   font-size: 50px;
   font-weight: bold;
 }
+.imagecolumn{ 
+  height: 100%;
+  width: 100%;
+}
+textcolumn {
+  padding: 20px;
+  margin: 30px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
 </style>
