@@ -93,7 +93,7 @@
                                 position: 'bottom-right',
                             })
 
-                            this.$router.push('/log-in')
+                            this.$router.push('/')
                         })
                         .catch(error => {
                             if (error.response) {
