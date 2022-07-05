@@ -12,30 +12,22 @@
 </div>
 </template>
     
-<script>
-    
-    export default {
-    }
-</script>
-    
-<style lang="css">
 
+    
+<style>
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .hero-image {
-  top: 80%;
+  top:0%;
   background-image:url(../assets/images/background.jpg);
   background-color: #cccccc;
   height:750px;
   width:100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #999;
  
 }
 

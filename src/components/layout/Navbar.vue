@@ -4,12 +4,13 @@
               <div @click="scroll('project')" class="logo dropdown">
                   <router-link to="/"> <v-img 
                     alt="Vuetify Logo"
-                    src="../assets/talent.png"
+                    src="../layout/talent.png"
                     transition="scale-transition"
                     width="200"/></router-link>
                 </div>
 
-     <div @click="scroll('/')" id="course" class="flex-items dropdown navbarclass" ><router-link to="/">Outsourcing<span class="caret"></span></router-link>
+     <div @click="scroll('/')" id="course" class="flex-items dropdown navbarclass" >
+     <router-link to="/">Outsourcing<span class="caret"></span></router-link>
                   <ul class="dropdown-menu">
                 <li id="sub-dropdown" class="dropdown"><router-link to="/whyworkwithus">Why work with us<span style="margin-left: 43px;" class="glyphicon glyphicon-chevron-right"></span> </router-link>
                   <ul id="sub-dropdown-menu" class="dropdown-menu">
@@ -33,15 +34,7 @@
                     <li><router-link to="/DEVOPS">DEVOPS</router-link></li>
                  </ul>
           </div>
-     <div id="course" class="flex-items dropdown navbarclass" ><router-link to="/Coworking"> Coworking <span class="caret"></span></router-link>
-        <ul class="dropdown-menu">
-                    <li><router-link to="/Coworking">Coworking</router-link></li>
-                    <li><router-link to="/PrivateOffice">Private office</router-link></li>
-                    <li><router-link to="/MeetingRoom">Meeting Room</router-link></li>
-                    <li><router-link to="/EventsSpace">Events space</router-link></li>
-           
-        </ul>
-          </div>
+    
      <div id="course" class="flex-items dropdown navbarclass" ><router-link to="/AboutUs">AboutUs<span class="caret"></span></router-link>
         <ul class="dropdown-menu">
                     <li><router-link to="/AboutUs">AboutUs</router-link></li>
