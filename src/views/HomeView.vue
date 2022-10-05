@@ -1,9 +1,7 @@
-/* eslint-disable vue/multi-word-component-names */
+
 <template>
   <v-app id="home" :style="{ background: $vuetify.theme.themes.dark.background }">
-     <Navbar/>
-    
-    <v-container fluid>
+     
       <v-row>
         <v-col cols="8" >
               <SliderComponent />
@@ -22,8 +20,10 @@
  <div class="appnow">
  <div > 
 
- <router-link class="ourbutton btn  btn-success m-2 fload-end" to="/applications"> Apply As Developer</router-link>
-         
+ <router-link class="ourbutton btn  btn-success m-2 fload-end" to="SignUp" > Apply As Developer</router-link>
+<!--     
+                            <router-link to="/sign-up" class="button is-success"><strong>Sign up</strong></router-link>
+                            <router-link to="/log-in" class="button is-light">Log in</router-link>      -->
   <!-- <Apply/> -->
   </div>
 
@@ -117,7 +117,7 @@
 
 
       </v-row>
-    </v-container>
+   
 
     
     <Footer/>
@@ -129,7 +129,6 @@
 </template>
 
 <script>
-  import Navbar from '../components/Navbar'
   import Footer from '../components/Footer.vue'
   import SliderComponent from "../components/SliderComponent.vue";
 // import recruit from "../components/recruit.vue"
@@ -138,11 +137,10 @@
     name: 'Home',
 
     components: {
-    Navbar,
+   
     Footer,
     SliderComponent,
-    // recruit,
-    // Apply,
+    
 },
   }
 </script>

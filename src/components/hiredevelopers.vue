@@ -1,6 +1,6 @@
 <template>
   <v-app id="home" :style="{ background: $vuetify.theme.themes.dark.background }">
-     <Navbar/>
+    
     <v-container class="ourcontainer"> 
     <h1 class="developerheader">Hire developers</h1>
     <div class="applicationsclass">
@@ -47,13 +47,11 @@
 </template>
 <script >
 import axios from "axios"
-  import Navbar from '../components/Navbar'
   import Footer from '../components/Footer.vue'
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: "Home",
       components: {
-    Navbar,
     Footer,
     // recruit,
     // Apply,

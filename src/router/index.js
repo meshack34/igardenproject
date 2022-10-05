@@ -1,8 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+<<<<<<< HEAD
 import LogIn from '../views/LogIn.vue'
 //import SignUp from '../views/SignUp.vue'
+=======
+import LogIn from '../components/LogIn.vue'
+import SignUp from '../components/SignUp.vue'
+import primaryskills from '../components/primaryskills.vue'
+import moreaboutyou from '../components/moreaboutyou.vue'
+>>>>>>> 899d81a9241191f197816dde1652bfb0af6926f2
 
 import whyworkwithus from "../components/whyworkwithus.vue"
 import apply from "../components/apply.vue";
@@ -22,11 +29,11 @@ import DEVOPS from "../components/DEVOPS.vue"
 import CustomeSoftware from "../components/CustomeSoftware.vue"
 
 
-import Coworking from "../components/Coworking.vue"
-import PrivateOffice from "../components/PrivateOffice.vue"
-import MeetingRoom from "../components/MeetingRoom.vue"
-import EventsSpace from "../components/EventsSpace.vue"
-import bookaspace from "../components/bookaspace.vue"
+// import Coworking from "../components/Coworking.vue"
+// import PrivateOffice from "../components/PrivateOffice.vue"
+// import MeetingRoom from "../components/MeetingRoom.vue"
+// import EventsSpace from "../components/EventsSpace.vue"
+// import bookaspace from "../components/bookaspace.vue"
 
 
 import AboutUs from "../components/AboutUs.vue"
@@ -49,6 +56,7 @@ const routes = [
   {
     name: "Login",
     component: LogIn,
+<<<<<<< HEAD
     path: "/login",
   },
   // {
@@ -56,6 +64,25 @@ const routes = [
   //   component: LogIn,
   //   path: "/login",
   // },
+=======
+    path: "/log-in",
+  },
+  {
+    name: "SignUp",
+    component: SignUp,
+    path: "/SignUp",
+  },
+  {
+    name: "primaryskills",
+    component: primaryskills,
+    path: "/primaryskills",
+  },
+  {
+    name: "moreaboutyou",
+    component: moreaboutyou,
+    path: "/moreaboutyou",
+  },
+>>>>>>> 899d81a9241191f197816dde1652bfb0af6926f2
 
 
   {
@@ -127,31 +154,31 @@ const routes = [
   },
 
 
-  {
-    name: "Coworking",
-    component: Coworking,
-    path: "/Coworking",
-  },
-  {
-    name: "PrivateOffice",
-    component: PrivateOffice,
-    path: "/PrivateOffice",
-  },
-  {
-    name: "MeetingRoom",
-    component: MeetingRoom,
-    path: "/MeetingRoom",
-  },
-  {
-    name: "EventsSpace",
-    component: EventsSpace,
-    path: "/EventsSpace",
-  },
-  {
-    name: "bookaspace",
-    component: bookaspace,
-    path: "/bookaspace",
-  },
+  // {
+  //   name: "Coworking",
+  //   component: Coworking,
+  //   path: "/Coworking",
+  // },
+  // {
+  //   name: "PrivateOffice",
+  //   component: PrivateOffice,
+  //   path: "/PrivateOffice",
+  // },
+  // {
+  //   name: "MeetingRoom",
+  //   component: MeetingRoom,
+  //   path: "/MeetingRoom",
+  // },
+  // {
+  //   name: "EventsSpace",
+  //   component: EventsSpace,
+  //   path: "/EventsSpace",
+  // },
+  // {
+  //   name: "bookaspace",
+  //   component: bookaspace,
+  //   path: "/bookaspace",
+  // },
   
 
   {
