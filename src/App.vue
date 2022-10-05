@@ -31,11 +31,6 @@
     }
 </script>
 
-<<<<<<< HEAD
-<style>
-@import '../node_modules/bulma';
-</style>
-=======
 <style lang="scss">
 @import '../node_modules/bulma';
 
@@ -44,4 +39,3 @@
 
 
 </style>
->>>>>>> 899d81a9241191f197816dde1652bfb0af6926f2

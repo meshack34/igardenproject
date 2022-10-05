@@ -1,15 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-<<<<<<< HEAD
-import LogIn from '../views/LogIn.vue'
-//import SignUp from '../views/SignUp.vue'
-=======
 import LogIn from '../components/LogIn.vue'
 import SignUp from '../components/SignUp.vue'
 import primaryskills from '../components/primaryskills.vue'
 import moreaboutyou from '../components/moreaboutyou.vue'
->>>>>>> 899d81a9241191f197816dde1652bfb0af6926f2
 
 import whyworkwithus from "../components/whyworkwithus.vue"
 import apply from "../components/apply.vue";
@@ -52,20 +47,10 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-
   {
     name: "Login",
     component: LogIn,
-<<<<<<< HEAD
     path: "/login",
-  },
-  // {
-  //   name: "Login",
-  //   component: LogIn,
-  //   path: "/login",
-  // },
-=======
-    path: "/log-in",
   },
   {
     name: "SignUp",
@@ -82,9 +67,6 @@ const routes = [
     component: moreaboutyou,
     path: "/moreaboutyou",
   },
->>>>>>> 899d81a9241191f197816dde1652bfb0af6926f2
-
-
   {
     name: "whyworkwithus",
     component: whyworkwithus,
