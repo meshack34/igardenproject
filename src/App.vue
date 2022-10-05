@@ -18,3 +18,7 @@ export default {
   }),
 };
 </script>
+
+<style>
+@import '../node_modules/bulma';
+</style>

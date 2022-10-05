@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import LogIn from '../views/LogIn.vue'
+//import SignUp from '../views/SignUp.vue'
 
 import whyworkwithus from "../components/whyworkwithus.vue"
 import apply from "../components/apply.vue";
@@ -43,6 +45,19 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
+  {
+    name: "Login",
+    component: LogIn,
+    path: "/login",
+  },
+  // {
+  //   name: "Login",
+  //   component: LogIn,
+  //   path: "/login",
+  // },
+
+
   {
     name: "whyworkwithus",
     component: whyworkwithus,

@@ -9,7 +9,8 @@
                     width="200"/></router-link>
                 </div>
 
-     <div @click="scroll('/')" id="course" class="flex-items dropdown navbarclass" ><router-link to="/">Outsourcing<span class="caret"></span></router-link>
+     <div @click="scroll('/')" id="course" class="flex-items dropdown navbarclass" >
+     <router-link to="/">Outsourcing<span class="caret"></span></router-link>
                   <ul class="dropdown-menu">
                 <li id="sub-dropdown" class="dropdown"><router-link to="/whyworkwithus">Why work with us<span style="margin-left: 43px;" class="glyphicon glyphicon-chevron-right"></span> </router-link>
                   <ul id="sub-dropdown-menu" class="dropdown-menu">
